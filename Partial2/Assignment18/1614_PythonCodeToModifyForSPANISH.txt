@@ -1,0 +1,22 @@
+
+# Python instructions to update the Sentiment Analysis code
+# for considering external files:
+# - list of negative words
+# - list of positive words
+# - list of positive sentences to determine the sentiment 
+# - list of negative sentendes to determine the sentiment
+
+# read external file with ONE WORD PER LINE
+text_file = open("positiveWords_Spanish.txt", "r")
+# convert IT to list
+positive_vocab = text_file.read().lstrip('\n').rstrip('\n').split('\n')
+
+
+# read external file with ONE SENTENCE PER LINE
+text_file = open("positiveSentences_Spanish.txt", "r")
+# convert IT to list
+sentences1 = text_file.read().rstrip('\n').split('\n')
+
+
+# join two list of sentences
+sentences = sentences1 + sentences2
